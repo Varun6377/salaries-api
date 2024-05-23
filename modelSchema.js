@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const salariesSchema = new mongoose.Schema({
   work_year: Number,
@@ -16,4 +16,4 @@ const salariesSchema = new mongoose.Schema({
 
 const Salaries = mongoose.model("Salaries", salariesSchema);
 
-export default Salaries;
+module.exports = Salaries;

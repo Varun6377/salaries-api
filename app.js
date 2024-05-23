@@ -1,9 +1,10 @@
-import express from "express";
-import cors from "cors";
-import connectDB from "./db.js";
-import Salaries from "./modelSchema.js";
+const express = require("express");
+const cors = require("cors");
+const dotenv = require("dotenv");
 
-import dotenv from "dotenv";
+const connectDB = require("./db.js");
+const Salaries = require("./modelSchema.js");
+
 dotenv.config();
 
 const port = process.env.PORT || 5000;
@@ -29,4 +30,4 @@ app.get("/", (_, res) => {
 
 app.listen(port, () => console.log(`Server started on port ${port}`));
 
-export default app;
+module.exports = app;
