@@ -1,14 +1,14 @@
 import express from "express";
 const app = express();
 import cors from "cors";
-import connectDB from "./db.js";
-import Salaries from "./modelSchema.js";
+import connectDB from "./server/db.js";
+import Salaries from "./server/modelSchema.js";
 
 import dotenv from "dotenv";
 dotenv.config();
 
 const port = process.env.PORT || 5000;
-
+ 
 connectDB();
 
 app.use(cors());
